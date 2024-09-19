@@ -1,0 +1,47 @@
+/* Custom styles for the nested table */
+.nested-table {
+    margin-left: 20px;
+    position: relative; /* Add relative positioning */
+    z-index: 1; /* Increase the z-index to bring the nested table forward */
+}
+
+.tree-line {
+    position: absolute;
+    top: 0%;
+    left: -20px;
+    bottom: 0%;
+    width: 2px;
+    background-color: #dddddd;
+    z-index: -1;
+}
+
+.horizontal-line {
+    position: relative;
+    top: -9px;
+    transform: translateY(-50%);
+    left: -28px;
+    width: 20px;
+    border-top: 2px solid #dddddd;
+    z-index: -1;
+}
+
+.accordion-toggle {
+    cursor: pointer;
+}
+
+/* Equal width columns in nested table */
+.nested-table th:nth-child(1),
+.nested-table td:nth-child(1) {
+    width: 5%; /* Adjust the width as needed */
+}
+
+.nested-table th:nth-child(2),
+.nested-table td:nth-child(2),
+.nested-table th:nth-child(3),
+.nested-table td:nth-child(3),
+.nested-table th:nth-child(4),
+.nested-table td:nth-child(4),
+.nested-table th:nth-child(5),
+.nested-table td:nth-child(5) {
+    width: 19%; /* Divide the remaining width equally among the columns */
+}
